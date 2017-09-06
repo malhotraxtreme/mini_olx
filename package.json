@@ -1,0 +1,11 @@
+{
+  "name": "mini_olx",
+  "version": "1.0.0",
+  "description": "Demo App having Buy-Sell Features like OLX.in",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
