@@ -1,5 +1,5 @@
 var userRouter = require('express').Router();
-var userController = require('../../controllers/user/userController');
+var userController = require('../controllers/userController');
 
 userRouter.route('/profile')
 .get(userController);

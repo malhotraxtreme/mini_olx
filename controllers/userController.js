@@ -1,4 +1,4 @@
-var User = require('../../models/userModel');
+var User = require('../models/userModel');
 
 var userController = (req,res)=>{
   //res.send("This is in User's profile Area");
