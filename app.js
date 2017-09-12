@@ -1,12 +1,18 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var userRouter = require('./routes/userRouter');
+var userController = require('./controllers/userController');
+var adController = require('./controllers/adController');
+
 
 var app = express();
-mongoose.connect('mongodb://localhost/mini_olx');
+var db = mongoose.connect('mongodb://localhost/mini_olx',{useMongoClient:true});
 //To give access to static files
-app.use('/assets', express.static('./assets'));
+app.use('/assets',express.static('./assets'));
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
+
 app.set('view engine','ejs');
 
 //Basic route for Home page
@@ -16,12 +22,11 @@ app.get('/',(req,res)=>{
 });
 
 //Handle App Routing
-app.use('/user',userRouter);
-
-
-
+//app.use('/user',userRouter);
+userController(app);
+adController(app);
 
 
 app.listen(3000);
 
-console.log("Server started @ 3000");
+console.log("Server started @ 3000\n\n\n");
