@@ -1,8 +1,101 @@
+/*Font Imports*/
+
+@font-face {
+    font-family: lato;
+    src: url(../fonts/lato/Lato-Regular.ttf);
+}
+
+/*Global Styles*/
+
 body{
+  margin-top: 50px;
   color:#FDFDFD;
 }
 
-h2{
-  margin: auto;
-  color:black;
+*{
+  font-family: lato;
+  color:black
 }
+
+/*NavBar Styling*/
+.navrow{
+  position: fixed;
+  display: block;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #242424;
+}
+
+.navbar{
+  padding:0 30px;
+}
+
+a.brand{
+  cursor: pointer;
+  height: 100%;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color:lime;
+  font-weight: 800;
+  font-size: 1.5em;
+  width:120px;
+}
+
+.navitems{
+
+  list-style: none;
+  display: inline-block;
+  margin: 0 0 5px 20px;
+}
+
+.navlink{
+  padding: 10px;
+  display:inline-block;
+  font-weight: 600;
+}
+
+li.navlink a{
+  text-decoration: none;
+  color:white;
+}
+
+a.loginbtn{
+    position: absolute;
+    right: 0;
+    top:5;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color:green;
+    font-weight: 800;
+    font-size: 1em;
+}
+.fa-user{
+  padding: 0 10px;
+  color:lime;
+}
+/*Footer Styling*/
+
+footer{
+  width: 100%;
+  position: fixed;;
+  bottom: 0;
+  left:0;
+  padding: 10px 30px;
+  background: #242424
+}
+.footerlinks{
+
+}
+.copyright{
+  text-align: center;
+  color:white;
+  font-size: 1em;
+}
+
+/*Body Starts Here*/

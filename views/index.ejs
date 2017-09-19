@@ -1,16 +1,11 @@
 <html>
 <head>
-  <title>Mini OLX</title>
-  <link rel="stylesheet" href="./assets/stylesheets/basic.css">
+<% include ./partials/head.ejs %>
 </head>
 <body>
-  <h2>This is gonna be the Home page</h2>
-    <form class="ab" action="/users" method="post">
-      <input type="text" name="name" value="">
-      <input type="text" name="age" value="">
-      <input type="text" name="class" value="">
-      <button type="submit" class="btn btn-primary"></button>
-    </form>
+<% include ./partials/header.ejs %>
+
+<% include ./partials/footer.ejs %>
 </body>
 
 </html>
