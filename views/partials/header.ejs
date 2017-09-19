@@ -9,9 +9,19 @@
       <li class="navlink"><a href="#">About</a></li>
     </ul>
 
-    <a href="#" class="loginbtn"><span class="fa fa-user fa-lg"></span>Sign In</a>
+    <a href="#" class="loginbtn" onclick="$('.login').fadeIn(300);"><span class="fa fa-user fa-lg"></span>Sign In</a>
 
   </div>
-
-
 </nav>
+<div class="login">
+  <div class="loginform">
+      <span class="closelogin fa fa-times fa-lg" onclick="$('.login').fadeOut(300);"></span>
+      <form action="#" method="post">
+        <input type="text" name="username" placeholder="Please enter your username.." class="logininput">
+        <input type="password" name="password" placeholder="Please enter your password.." class="logininput">
+        <button type="submit" name="login" class="loginsubmit">LOGIN</button>
+        <a href="#" class="loginhyperlink">Not Registered ?</a>
+        <a href="#" class="loginhyperlink">Forgot Password ?</a>
+      </form>
+  </div>
+</div>
