@@ -1,8 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var userController = require('./controllers/userController');
-var adController = require('./controllers/adController');
+var profileRouter = require('./routes/profileRouter');
+var advertismentsRouter = require('./routes/advertisementsRouter');
+var homeRouter = require('./routes/homeRouter');
 
 
 var app = express();
@@ -16,16 +17,10 @@ app.use(bodyParser.json());
 
 app.set('view engine','ejs');
 
-//Basic route for Home page
-app.get('/',(req,res)=>{
-  res.status(200);
-  res.render("index");
-});
-
-//Handle App Routing
-//app.use('/user',userRouter);
-userController(app);
-adController(app);
+//Routes
+app.use('/',homeRouter);
+app.use('/advertisements',advertismentsRouter);
+app.use('/profile',profileRouter);
 
 
 app.listen(3000);
