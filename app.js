@@ -12,8 +12,8 @@ var db = mongoose.connect('mongodb://localhost/mini_olx',{useMongoClient:true});
 app.use('/assets',express.static('./assets'));
 app.use('/node_modules',express.static('./node_modules'));
 
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.set('view engine','ejs');
 
