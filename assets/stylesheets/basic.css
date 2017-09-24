@@ -103,7 +103,7 @@ footer{
 }
 
 /*LOGIN CSS*/
-.login{
+.authenticatebg{
   display: none;
   height: 100%;
   width: 100%;
@@ -115,7 +115,7 @@ footer{
   overflow: none;
 }
 
-.loginform{
+.loginform, .regform{
   display: none;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
   border-bottom: 3px solid lime;
@@ -130,7 +130,7 @@ footer{
   position: relative;
 }
 
-.logininput{
+.authinput{
   display: block;
   width: 90%;
   height: 45px;
@@ -143,16 +143,34 @@ footer{
   color: white;
   transition: border 0.3s linear;
 }
-.logininput:hover{
+.authinputhalf{
+  display: inline-block;
+  width: 45%;
+  height: 45px;
+  border-radius: 10px;
+  margin:auto;
+  padding: 10px;
+  font-size: 1em;
+  border:2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: border 0.3s linear;
+}
+
+.authinputhalf:hover{
   border:2px solid royalblue;
 }
 
-.loginsubmit{
+.authinput:hover{
+  border:2px solid royalblue;
+}
+
+.authsubmit{
   display: block;
   min-width: 90%;
   min-height: 30px;
   border-radius: 15px;
-  margin: 60px auto 20px;
+  margin: 30px auto;
   padding: 10px;
   color:white;
   border:2px solid green;
@@ -162,11 +180,11 @@ footer{
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.loginsubmit:hover{
+.authsubmit:hover{
   background: green;
   color: white;
 }
-.closelogin{
+.closeauth{
   border: 1px solid;
   border-radius: 50%;
   font-size: 1em;
@@ -174,11 +192,11 @@ footer{
   padding: 7px;
   right: -10;
   top:-10;
-  color:green;
+  color:white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.closelogin:hover{
+.closeauth:hover{
   color:red;
 }
 
